@@ -12,7 +12,8 @@
     "antd": "^6.3.3",
     "next": "16.1.7",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "styled-components": "^6.3.12"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
