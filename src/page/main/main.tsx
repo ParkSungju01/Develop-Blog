@@ -1,11 +1,23 @@
+"use client"
+import { useRouter, usePathname } from "next/navigation"
 import * as S from "../main/main.style";
-import Banner from "../Banner/Banner";
 import Image from "next/image"
+import {contents} from "../../components/TabsContents"
 export default function Main() {
+  const router = useRouter();
+  const pathname = usePathname();
+  const activeKey = pathname === "/blog" ? "blog" : "main";
+  const onChange = (key:string)=>{
+    router.push(key === "blog"? "/blog" : "/");
+  }
   return (
     <S.Container>
       <S.Banner>
-        <Banner />
+        <S.StyledTabs
+          activeKey={activeKey}
+          items={contents}
+          onChange={onChange}
+        />
       </S.Banner>
       <S.MainBox>
         <S.LeftBox>
