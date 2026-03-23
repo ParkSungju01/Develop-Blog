@@ -11,7 +11,22 @@ export const Container = styled.div`
 export const Banner = styled.div`
   width: 100%;
   height: 80px;
+  display: flex;
+  justify-content: space-between;
 `;
+
+export const Logo = styled.span`
+  width:100%;
+  display:flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 40px;
+  font-weight: bold;
+  margin-left: 20px;
+  padding-top: 10px;
+  letter-spacing: -1px;
+  cursor:pointer;
+`
 
 export const StyledTabs = styled(Tabs)`
   float: right;
@@ -61,20 +76,20 @@ export const Title = styled.h1`
   padding-bottom: 5px;
 `;
 
-export const SubTitle = styled.h1`
+export const SubTitle = styled.h2`
   font-size: 30px;
   color: #ffffff38;
   margin-left: 5px;
 `;
 
-export const MiddleTitle = styled.h1`
+export const MiddleTitle = styled.h3`
   width:80%;
   font-size: 40px;
   font-weight: bold;
   margin-top: 30px;
 `
 
-export const SmallTitle = styled.h1`
+export const SmallTitle = styled.h3`
   font-size: 20px;
   color: #ffffff8f
 `

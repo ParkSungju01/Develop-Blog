@@ -13,6 +13,7 @@ export default function Main() {
   return (
     <S.Container>
       <S.Banner>
+        <S.Logo>Dev Blog</S.Logo>
         <S.StyledTabs
           activeKey={activeKey}
           items={contents}
@@ -33,7 +34,9 @@ export default function Main() {
           <S.MiddleTitle>박성주</S.MiddleTitle>
           <S.SmallTitle>Jonior Developer</S.SmallTitle>
           <S.Div>
-            <Image src="/GitHub_Invertocat_Black.png" alt="gitHub" width={40} height={40} />
+            <Image src="/GitHub_Invertocat_Black.png" alt="gitHub" width={40} height={40} onClick={()=>{
+              window.open("https://github.com/ParkSungju01","_blank")
+            }} />
           </S.Div>
         </S.RightBox>
       </S.MainBox>
