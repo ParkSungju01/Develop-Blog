@@ -3,7 +3,8 @@ import { useRouter, usePathname } from "next/navigation"
 import * as S from "../main/main.style";
 import Image from "next/image"
 import {contents} from "../../components/TabsContents"
-export default function Main() {
+import {PostMeta} from "../../lib/posts"
+export default function Main({posts}:{ posts: PostMeta[] }) {
   const router = useRouter();
   const pathname = usePathname();
   const activeKey = pathname === "/blog" ? "blog" : "main";
@@ -29,6 +30,14 @@ export default function Main() {
           <S.MiddleTitle>
             최근 포스트
           </S.MiddleTitle>
+          <S.PostList>
+            {posts.map((post) => (
+              <S.PostItem key={post.slug} onClick={() => router.push(`/blog/${post.slug}`)}>
+                <S.PostTitle>{post.title}</S.PostTitle>
+                <S.PostDate>{post.date.slice(0,10)}</S.PostDate>
+              </S.PostItem>
+            ))}
+          </S.PostList>
         </S.LeftBox>
         <S.RightBox>
           <S.MiddleTitle>박성주</S.MiddleTitle>

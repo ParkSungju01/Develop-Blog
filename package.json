@@ -11,9 +11,11 @@
   "dependencies": {
     "@ant-design/icons": "6.x",
     "antd": "^6.3.3",
+    "gray-matter": "^4.0.3",
     "next": "16.1.7",
     "react": "19.2.3",
     "react-dom": "19.2.3",
+    "react-markdown": "^10.1.0",
     "styled-components": "^6.3.12"
   },
   "devDependencies": {

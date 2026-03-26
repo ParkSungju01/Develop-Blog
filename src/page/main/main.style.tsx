@@ -76,7 +76,7 @@ export const Title = styled.h1`
   padding-bottom: 5px;
 `;
 
-export const SubTitle = styled.h2`
+export const SubTitle = styled.div`
   font-size: 30px;
   color: #ffffff38;
   margin-left: 5px;
@@ -93,6 +93,37 @@ export const SmallTitle = styled.h3`
   font-size: 20px;
   color: #ffffff8f
 `
+
+export const PostList = styled.div`
+  width: 80%;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+`
+
+export const PostItem = styled.div`
+  padding: 20px;
+  border: 1px solid #ffffff22;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  &:hover {
+    background-color: #ffffff11;
+  }
+`
+
+export const PostTitle = styled.h2`
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 6px;
+`
+
+export const PostDate = styled.span`
+  font-size: 14px;
+  color: #ffffff8f;
+`
+
 export const Div = styled.div`
   width:40px;
   height:40px;
